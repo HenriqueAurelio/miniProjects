@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "question": "O que é JSX?",
+            "answer": "JSX é uma sintaxe para escrever html dentro do JS"
+        },
+        {
+            "question": "O que é CSS?",
+            "answer": "CSS da o estilo de seu html para ficar apresentavel"
+        },
+        {
+            "question": "O que é HTML?",
+            "answer": "Estrutura da sua pagina"
+        },
+        {
+            "question": "O que é JS?",
+            "answer": "Javascript"
+        }
+    ]
+}
