@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import { BsCaretRight } from "react-icons/bs";
-import { Container, InnerContainer } from './styles.js';
+import { Container, InnerContainer, CustomH1 } from './styles.js';
 import Question from '../Question'
 
 
@@ -9,6 +9,7 @@ import Question from '../Question'
 
 function QuestionCard({ questionNumber, data }) {
     const [questionVisible, setQuestionVisible] = useState(false)
+    const [answerType, setAnswerType] = useState('')
 
     function showQuestion() {
         setQuestionVisible(true)
@@ -18,11 +19,11 @@ function QuestionCard({ questionNumber, data }) {
         <Container>
             {questionVisible === false ?
                 <InnerContainer>
-                    <h1>Pergunta {questionNumber} </h1>
+                    <CustomH1 type={answerType}>Pergunta {questionNumber} </CustomH1>
                     <BsCaretRight size={40} onClick={() => showQuestion()} />
                 </InnerContainer>
                 :
-                <Question data={data} />
+                <Question data={data} setAnswerType={setAnswerType} setQuestionVisible={setQuestionVisible} />
             }
 
         </Container>

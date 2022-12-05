@@ -21,3 +21,9 @@ export const InnerContainer = styled.div`
   padding:0px 10px 0px 10px;
   height:70px;
 `;
+
+export const CustomH1 = styled.h1`
+  color: ${props => props.type === "warning" ? "yellow" : ""};
+  color: ${props => props.type === "success" ? "green" : ""};
+  color: ${props => props.type === "error" ? "red" : ""};
+`

@@ -7,7 +7,7 @@ import Answer from '../Answer'
 
 
 
-function QuestionCard({ data }) {
+function QuestionCard({ data, setAnswerType, setQuestionVisible }) {
     const [answerVisible, setAnswerVisible] = useState(false)
 
     function showAnswer() {
@@ -23,7 +23,7 @@ function QuestionCard({ data }) {
                         <BsArrowBarRight size={40} onClick={() => showAnswer()} />
                     </IconContainer>
                 </InnerContainer>
-                : <Answer data={data} />}
+                : <Answer data={data} setAnswerType={setAnswerType} setQuestionVisible={setQuestionVisible} setAnswerVisible={setAnswerVisible} />}
         </Container>
 
     );

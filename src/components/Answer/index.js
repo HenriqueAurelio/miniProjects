@@ -5,19 +5,19 @@ import Button from '../Button'
 
 
 
-function Answer({ data }) {
+function Answer({ data, setAnswerType, setQuestionVisible, setAnswerVisible }) {
     return (
         <InnerContainer>
             <h1>{data.question}</h1>
             <h1>{data.answer} </h1>
             <ButtonContainer>
-                <Button type={"error"} >
+                <Button type={"error"} setAnswerType={setAnswerType} setQuestionVisible={setQuestionVisible} setAnswerVisible={setAnswerVisible} >
                     Não lembrei
                 </Button>
-                <Button type={"warning"} marginLeft>
+                <Button type={"warning"} setAnswerType={setAnswerType} marginHorizontal setQuestionVisible={setQuestionVisible} setAnswerVisible={setAnswerVisible}>
                     Quase não lembrei
                 </Button>
-                <Button type={"success"} marginLeft>
+                <Button type={"success"} setAnswerType={setAnswerType} setQuestionVisible={setQuestionVisible} setAnswerVisible={setAnswerVisible}>
                     Acertei!
                 </Button>
             </ButtonContainer>
